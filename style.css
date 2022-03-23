@@ -1,585 +1,590 @@
-                html {
-                    margin: 0;
-                    font-family: Verdana, Helvetica, sans-serif;
-                }
-                
-                body {
-                    background-color: rgb(60, 58, 36);
-                    color: rgb(203, 198, 192);
-                    margin: 0;
-                }
-                
-                .main_wrapper {
-                    margin: 0;
-                    display: flex;
-                    flex-direction: column;
-                }
-                
-                #description {
-                    height: 100vh;
-                    min-height: 650px;
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                .navbar {
-                    flex: 1;
-                    width: 100%;
-                    display: flex;
-                    background-color: rgb(21, 23, 24);
-                }
-                
-                nav {
-                    height: 100%;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                    list-style-type: none;
-                    padding-right: 25px;
-                }
-                
-                nav a {
-                    height: 100%;
-                    width: fit-content;
-                    min-width: 5%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 0px 15px;
-                    cursor: pointer;
-                }
-                
-                nav a {
-                    color: rgb(212, 163, 1);
-                    text-decoration: none;
-                    font-weight: 500;
-                }
-                
-                nav a:hover {
-                    background-color: rgb(60 58 36);
-                }
-                
-                .desc {
-                    flex: 13;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                }
-                
-                .top_desc {
-                    width: 80%;
-                    font-size: 2em;
-                }
-                
-                .socials {
-                    width: 80%;
-                    display: flex;
-                    flex-direction: row;
-                }
-                
-                .socials a {
-                    margin: 0px 10px;
-                }
-                
-                .linkedin {
-                    min-width: 50px;
-                    min-height: 50px;
-                    max-width: 50px;
-                    max-height: 50px;
-                    border: 3px solid rgb(212, 163, 1);
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    opacity: 0%;
-                }
-                
-                .linkedin_logo {
-                    height: 50%;
-                    width: 50%;
-                    content: url("resources/images/vectors/linkedin_logo.svg");
-                }
-                
-                .github {
-                    min-width: 50px;
-                    min-height: 50px;
-                    max-width: 50px;
-                    max-height: 50px;
-                    border: 3px solid rgb(212, 163, 1);
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    opacity: 0%;
-                }
-                
-                .github_logo {
-                    height: 60%;
-                    width: 60%;
-                    content: url("resources/images/vectors/github_logo.svg");
-                }
-                
-                #projects {
-                    height: 100vh;
-                    min-height: 650px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                .project {
-                    opacity: 0%;
-                    height: 100%;
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                .visuals {
-                    width: 70%;
-                    aspect-ratio: 2 / 1;
-                    border: 3px solid rgb(212, 163, 1);
-                    border-bottom: none;
-                }
-                
-                .visual {
-                    position: relative;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                }
-                
-                .previous_image,
-                .next_image {
-                    position: absolute;
-                    height: 50px;
-                    width: 50px;
-                    border-radius: 50%;
-                    border: 3px solid rgb(203, 198, 192, 0.7);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                .previous_image {
-                    left: 0;
-                    margin: 0 0 0 10px;
-                    cursor: pointer;
-                }
-                
-                .next_image {
-                    right: 0;
-                    margin: 0 10px 0 0;
-                    cursor: pointer;
-                }
-                
-                .previous_image:hover,
-                .next_image:hover {
-                    background-color: rgb(203, 198, 192, 0.3);
-                }
-                
-                .arrow {
-                    border: solid rgb(203, 198, 192, 0.7);
-                    border-width: 0 3px 3px 0;
-                    display: inline-block;
-                    padding: 8px;
-                }
-                
-                .right {
-                    transform: rotate(-45deg);
-                    -webkit-transform: rotate(-45deg);
-                    margin-right: 8px;
-                }
-                
-                .left {
-                    transform: rotate(135deg);
-                    -webkit-transform: rotate(135deg);
-                    margin-left: 8px;
-                }
-                
-                .selector {
-                    height: auto;
-                    display: flex;
-                    flex-direction: row;
-                    background-color: rgb(21, 23, 24);
-                }
-                
-                .selector div {
-                    flex: 1;
-                    height: 100%;
-                }
-                
-                .previous_project,
-                .next_project {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 1.2em;
-                }
-                
-                .previous_project:hover,
-                .next_project:hover {
-                    background-color: rgb(50, 53, 53);
-                    cursor: pointer;
-                }
-                
-                .project_bottom {
-                    width: 70%;
-                    height: 20%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border: 3px solid rgb(212, 163, 1);
-                    border-top: none;
-                }
-                
-                .project_desc {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 0 50px;
-                    font-size: 100%;
-                }
-                
-                .project_desc p {
-                    height: 100%;
-                    text-align: justify;
-                }
-                
-                .project_desc a {
-                    text-decoration: none;
-                    color: rgb(212, 163, 1);
-                }
-                
-                #about {
-                    height: 100vh;
-                    min-height: 650px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-evenly;
-                    align-items: center;
-                }
-                
-                .me_image {
-                    width: 40%;
-                }
-                
-                .me {
-                    height: 50%;
-                    width: 40%;
-                    display: flex;
-                    flex-direction: column;
-                    text-align: justify;
-                    justify-content: center;
-                }
-                
-                .me>* {
-                    font-size: 1.3em;
-                }
-                
-                .me h2 {
-                    opacity: 0%;
-                    font-size: 1.7em;
-                }
-                
-                .me>p {
-                    opacity: 0%;
-                }
-                
-                .me a {
-                    color: rgb(212, 163, 1);
-                }
-                
-                .bottom_me {
-                    opacity: 0%;
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-                
-                .bottom_me p:nth-of-type(2) {
-                    color: rgb(212, 163, 1);
-                }
-                
-                #contacts {
-                    height: 100vh;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                }
-                
-                .contact_container {
-                    height: 100%;
-                    width: 100%;
-                    flex: 20;
-                    display: flex;
-                    flex-direction: row-reverse;
-                    align-items: center;
-                    justify-content: center;
-                }
-                
-                .go_up {
-                    flex: 1;
-                    width: 100%;
-                    text-align: center;
-                }
-                
-                .go_up a {
-                    color: rgb(203, 198, 192);
-                }
-                
-                .left_contacts,
-                .right_contacts {
-                    width: 50%;
-                }
-                
-                .left_contacts {
-                    padding-left: 50px;
-                }
-                
-                .right_contacts {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                
-                .right_contacts>div {
-                    width: 80%;
-                }
-                
-                .mail_phone {
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-                
-                .mail_phone h2 {
-                    width: 80%;
-                }
-                
-                .contact {
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    margin: 20px;
-                }
-                
-                .contact p {
-                    margin: 0px 20px;
-                    width: fit-content;
-                }
-                
-                .contact a {
-                    color: rgb(203, 198, 192);
-                }
-                
-                .contact>div {
-                    width: 100%;
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                }
-                
-                .contact>div>div {
-                    display: flex;
-                    align-items: center;
-                }
-                
-                .mail,
-                .phone {
-                    min-width: 50px;
-                    max-width: 50px;
-                    min-height: 50px;
-                    max-height: 50px;
-                    border: 3px solid rgb(212, 163, 1);
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                .mail_logo {
-                    content: url("resources/images/vectors/gmail_logo.svg");
-                    max-width: 75%;
-                    max-height: 75%;
-                    min-width: 75%;
-                    min-height: 75%;
-                }
-                
-                .mail_copy,
-                .phone_copy {
-                    visibility: hidden;
-                }
-                
-                .phone_logo {
-                    content: url("resources/images/vectors/phone_logo.svg");
-                    max-width: 70%;
-                    max-height: 70%;
-                    min-width: 70%;
-                    min-height: 70%;
-                }
-                
-                .copy_logo {
-                    content: url("resources/images/vectors/copy_logo.svg");
-                    max-height: 25px;
-                    max-width: 25px;
-                    min-height: 25px;
-                    min-width: 25px;
-                    cursor: pointer;
-                    margin-right: 10px;
-                }
-                
-                form {
-                    height: 100%;
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                }
-                
-                input:not(#form_submit),
-                textarea {
-                    width: 100%;
-                }
-                
-                input,
-                textarea {
-                    font-family: Verdana, Helvetica, sans-serif;
-                    color: rgb(203, 198, 192);
-                    font-size: 1em;
-                    padding: 10px 8px;
-                    margin-top: 5px;
-                    margin-bottom: 5px;
-                    border: 1px solid rgb(203, 198, 192);
-                    background-color: rgb(50, 53, 53);
-                }
-                
-                #form_name {
-                    margin-right: 5px;
-                }
-                
-                #form_email {
-                    margin-left: 5px;
-                }
-                
-                .name_email {
-                    width: calc(100% + 16px);
-                    display: flex;
-                    justify-content: space-between;
-                }
-                
-                .email_body {
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                .send {
-                    width: 100%;
-                    display: flex;
-                    justify-content: flex-end;
-                }
-                
-                #form_submit {
-                    cursor: pointer;
-                }
-                
-                #form_submit:active {
-                    background-color: rgb(21, 23, 24);
-                }
-                
-                @media screen and (max-width: 1080px) {
-                    .top_desc {
-                        font-size: 1.6em;
-                    }
-                    .project {
-                        width: 90%;
-                    }
-                    .project>* {
-                        width: 90%;
-                    }
-                    .previous_image,
-                    .next_image {
-                        height: 25px;
-                        width: 25px;
-                    }
-                    .project_bottom {
-                        height: fit-content;
-                    }
-                    .selector {
-                        height: 20%;
-                    }
-                    .arrow {
-                        border-width: 0 3px 3px 0;
-                        padding: 4px;
-                    }
-                    .right {
-                        margin-right: 4px;
-                    }
-                    .left {
-                        margin-left: 4px;
-                    }
-                    #about {
-                        flex-direction: column-reverse;
-                    }
-                    .me {
-                        height: 60%;
-                        width: 90%;
-                    }
-                    .me h2 {
-                        height: fit-content;
-                    }
-                    .me>p:nth-of-type(1) {
+                    html {
                         margin: 0;
-                        overflow-y: scroll;
+                        font-family: Verdana, Helvetica, sans-serif;
+                    }
+                    
+                    body {
+                        background-color: rgb(60, 58, 36);
+                        color: rgb(203, 198, 192);
+                        margin: 0;
+                    }
+                    
+                    .main_wrapper {
+                        margin: 0;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    
+                    #description {
+                        height: 100vh;
+                        min-height: 650px;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .navbar {
+                        flex: 1;
+                        width: 100%;
+                        display: flex;
+                        background-color: rgb(21, 23, 24);
+                    }
+                    
+                    nav {
                         height: 100%;
-                        padding: 10px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        list-style-type: none;
+                        padding-right: 25px;
                     }
-                    .me_image {
-                        height: 20%;
+                    
+                    nav a {
+                        height: 100%;
+                        width: fit-content;
+                        min-width: 5%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0px 15px;
+                        cursor: pointer;
                     }
-                    #contacts {
-                        height: fit-content;
+                    
+                    nav a {
+                        color: rgb(212, 163, 1);
+                        text-decoration: none;
+                        font-weight: 500;
                     }
-                    .contact_container {
+                    
+                    nav a:hover {
+                        background-color: rgb(60 58 36);
+                    }
+                    
+                    .desc {
+                        flex: 13;
+                        display: flex;
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
                     }
-                    .left_contacts {
+                    
+                    .top_desc {
+                        width: 80%;
+                        font-size: 2em;
+                    }
+                    
+                    .socials {
+                        width: 80%;
+                        display: flex;
+                        flex-direction: row;
+                    }
+                    
+                    .socials a {
+                        margin: 0px 10px;
+                    }
+                    
+                    .linkedin {
+                        min-width: 50px;
+                        min-height: 50px;
+                        max-width: 50px;
+                        max-height: 50px;
+                        border: 3px solid rgb(212, 163, 1);
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0%;
+                    }
+                    
+                    .linkedin_logo {
+                        height: 50%;
+                        width: 50%;
+                        content: url("resources/images/vectors/linkedin_logo.svg");
+                    }
+                    
+                    .github {
+                        min-width: 50px;
+                        min-height: 50px;
+                        max-width: 50px;
+                        max-height: 50px;
+                        border: 3px solid rgb(212, 163, 1);
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0%;
+                    }
+                    
+                    .github_logo {
+                        height: 60%;
+                        width: 60%;
+                        content: url("resources/images/vectors/github_logo.svg");
+                    }
+                    
+                    #projects {
                         height: 100vh;
                         min-height: 650px;
-                        width: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
                     }
-                    .right_contacts {
+                    
+                    .project {
+                        opacity: 0%;
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .visuals {
                         width: 70%;
+                        aspect-ratio: 2 / 1;
+                        border: 3px solid rgb(212, 163, 1);
+                        border-bottom: none;
+                    }
+                    
+                    .visual {
+                        position: relative;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                    }
+                    
+                    .previous_image,
+                    .next_image {
+                        position: absolute;
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        border: 3px solid rgb(203, 198, 192, 0.7);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .previous_image {
+                        left: 0;
+                        margin: 0 0 0 10px;
+                        cursor: pointer;
+                    }
+                    
+                    .next_image {
+                        right: 0;
+                        margin: 0 10px 0 0;
+                        cursor: pointer;
+                    }
+                    
+                    .previous_image:hover,
+                    .next_image:hover {
+                        background-color: rgb(203, 198, 192, 0.3);
+                    }
+                    
+                    .arrow {
+                        border: solid rgb(203, 198, 192, 0.7);
+                        border-width: 0 3px 3px 0;
+                        display: inline-block;
+                        padding: 8px;
+                    }
+                    
+                    .right {
+                        transform: rotate(-45deg);
+                        -webkit-transform: rotate(-45deg);
+                        margin-right: 8px;
+                    }
+                    
+                    .left {
+                        transform: rotate(135deg);
+                        -webkit-transform: rotate(135deg);
+                        margin-left: 8px;
+                    }
+                    
+                    .selector {
+                        height: auto;
+                        display: flex;
+                        flex-direction: row;
+                        background-color: rgb(21, 23, 24);
+                    }
+                    
+                    .selector div {
+                        flex: 1;
+                        height: 100%;
+                    }
+                    
+                    .previous_project,
+                    .next_project {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.2em;
+                    }
+                    
+                    .previous_project:hover,
+                    .next_project:hover {
+                        background-color: rgb(50, 53, 53);
+                        cursor: pointer;
+                    }
+                    
+                    .project_bottom {
+                        width: 70%;
+                        height: 20%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 3px solid rgb(212, 163, 1);
+                        border-top: none;
+                    }
+                    
+                    .project_desc {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0 50px;
+                        font-size: 100%;
+                    }
+                    
+                    .project_desc p {
+                        height: 100%;
+                        text-align: justify;
+                    }
+                    
+                    .project_desc a {
+                        text-decoration: none;
+                        color: rgb(212, 163, 1);
+                    }
+                    
+                    #about {
                         height: 100vh;
                         min-height: 650px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        align-items: center;
                     }
-                }
-                
-                h3 {
-                    font-family: 'Courier New', Courier, monospace;
-                }
-                
-                h2 {
-                    font-family: 'Courier New', Courier, monospace;
-                    text-align: center;
-                }
+                    
+                    .me_image {
+                        width: 40%;
+                    }
+                    
+                    .me {
+                        height: 50%;
+                        width: 40%;
+                        display: flex;
+                        flex-direction: column;
+                        text-align: justify;
+                        justify-content: center;
+                    }
+                    
+                    .me>* {
+                        font-size: 1.3em;
+                    }
+                    
+                    .me h2 {
+                        opacity: 0%;
+                        font-size: 1.7em;
+                    }
+                    
+                    .me>p {
+                        opacity: 0%;
+                    }
+                    
+                    .me a {
+                        color: rgb(212, 163, 1);
+                    }
+                    
+                    .bottom_me {
+                        opacity: 0%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    
+                    .bottom_me p:nth-of-type(2) {
+                        color: rgb(212, 163, 1);
+                    }
+                    
+                    #contacts {
+                        height: 100vh;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    
+                    .contact_container {
+                        height: 100%;
+                        width: 100%;
+                        flex: 20;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    
+                    .go_up {
+                        flex: 1;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    
+                    .go_up a {
+                        color: rgb(203, 198, 192);
+                    }
+                    
+                    .left_contacts,
+                    .right_contacts {
+                        width: 50%;
+                    }
+                    
+                    .left_contacts {
+                        padding-left: 50px;
+                    }
+                    
+                    .right_contacts {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    
+                    .right_contacts>div {
+                        width: 80%;
+                    }
+                    
+                    .mail_phone {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    
+                    .mail_phone h2 {
+                        width: 80%;
+                    }
+                    
+                    .contact {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 20px;
+                    }
+                    
+                    .contact p {
+                        margin: 0px 20px;
+                        width: fit-content;
+                    }
+                    
+                    .contact a {
+                        color: rgb(203, 198, 192);
+                    }
+                    
+                    .contact>div {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                    }
+                    
+                    .contact>div>div {
+                        display: flex;
+                        align-items: center;
+                    }
+                    
+                    .mail,
+                    .phone {
+                        min-width: 50px;
+                        max-width: 50px;
+                        min-height: 50px;
+                        max-height: 50px;
+                        border: 3px solid rgb(212, 163, 1);
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .mail_logo {
+                        content: url("resources/images/vectors/gmail_logo.svg");
+                        max-width: 75%;
+                        max-height: 75%;
+                        min-width: 75%;
+                        min-height: 75%;
+                    }
+                    
+                    .mail_copy,
+                    .phone_copy {
+                        visibility: hidden;
+                    }
+                    
+                    .phone_logo {
+                        content: url("resources/images/vectors/phone_logo.svg");
+                        max-width: 70%;
+                        max-height: 70%;
+                        min-width: 70%;
+                        min-height: 70%;
+                    }
+                    
+                    .copy_logo {
+                        content: url("resources/images/vectors/copy_logo.svg");
+                        max-height: 25px;
+                        max-width: 25px;
+                        min-height: 25px;
+                        min-width: 25px;
+                        cursor: pointer;
+                        margin-right: 10px;
+                    }
+                    
+                    form {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+                    
+                    input:not(#form_submit),
+                    textarea {
+                        width: 100%;
+                    }
+                    
+                    input,
+                    textarea {
+                        font-family: Verdana, Helvetica, sans-serif;
+                        color: rgb(203, 198, 192);
+                        font-size: 1em;
+                        padding: 10px 8px;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        border: 1px solid rgb(203, 198, 192);
+                        background-color: rgb(50, 53, 53);
+                    }
+                    
+                    #form_name {
+                        margin-right: 5px;
+                    }
+                    
+                    #form_email {
+                        margin-left: 5px;
+                    }
+                    
+                    .name_email {
+                        width: calc(100% + 16px);
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    
+                    .email_body {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .send {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                    
+                    #form_submit {
+                        cursor: pointer;
+                    }
+                    
+                    #form_submit:active {
+                        background-color: rgb(21, 23, 24);
+                    }
+                    
+                    @media screen and (max-width: 1080px) {
+                        .top_desc {
+                            font-size: 1.6em;
+                        }
+                        .project {
+                            width: 90%;
+                        }
+                        .project>* {
+                            width: 90%;
+                        }
+                        .previous_image,
+                        .next_image {
+                            height: 25px;
+                            width: 25px;
+                        }
+                        .project_bottom {
+                            height: fit-content;
+                        }
+                        .selector {
+                            height: 20%;
+                        }
+                        .arrow {
+                            border-width: 0 3px 3px 0;
+                            padding: 4px;
+                        }
+                        .right {
+                            margin-right: 4px;
+                        }
+                        .left {
+                            margin-left: 4px;
+                        }
+                        #about {
+                            flex-direction: column-reverse;
+                        }
+                        .me {
+                            height: 60%;
+                            width: 90%;
+                        }
+                        .me h2 {
+                            height: fit-content;
+                        }
+                        .me>p:nth-of-type(1) {
+                            margin: 0;
+                            overflow-y: scroll;
+                            height: 100%;
+                            padding: 10px;
+                        }
+                        .me_image {
+                            height: 20%;
+                        }
+                        #contacts {
+                            height: fit-content;
+                        }
+                        .contact_container {
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .left_contacts {
+                            height: 100vh;
+                            min-height: 650px;
+                            width: 90%;
+                        }
+                        .right_contacts {
+                            width: 70%;
+                            height: 100vh;
+                            min-height: 650px;
+                        }
+                    }
+                    
+                    h3 {
+                        font-family: 'Courier New', Courier, monospace;
+                    }
+                    
+                    h2 {
+                        font-family: 'Courier New', Courier, monospace;
+                        text-align: center;
+                    }
+                    
+                    h6 {
+                        font-family: 'Courier New', Courier, monospace;
+                        text-align: center;
+                    }
