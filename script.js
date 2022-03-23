@@ -53,7 +53,7 @@ function copy_to_clipboard(name) {
     var copyText = document.querySelector("." + name + "_text");
     navigator.clipboard.writeText(copyText.innerHTML);
     if (name == 'phone') {
-        navigator.clipboard.writeText('+33617338824');
+        navigator.clipboard.writeText('+33751569918');
     }
     show_copy(name)
 }
