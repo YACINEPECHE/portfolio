@@ -1,17 +1,4 @@
-var project_1 = {
-    name: "Liberty Commerce",
-    description: "Liberty Commerce est un projet de création d'un site web d'e-commerce.<br> Réalisé en équipe de deux,\
-    nous avons utilisé le framework <strong>Laravel</strong> avec ses vues <strong>blade</strong> pour créer nos affichages; et\
-    <strong>Eloquent</strong> son système d'interaction avec les bases de données pour gérer les informations relatives aux\
-    produits en vente sur notre site.\nMélangeant <strong>CSS</strong>, <strong>HTML</strong> et <strong>JavaScript</strong>, ce\
-    projet m'a permis d'approfondir mes connaissances et développer mes compétences dans les technologies du web et la gestion\
-    d'erreurs.",
-    photos: ["resources/images/vectors/phdemo.png", "resources/images/vectors/phdemo1.png", "resources/images/vectors/phdemo2.png"],
-}
-
-
-
-var projects = [project_1]
+var projects = [project_1, project_2, project_3]
 
 
 var i = 0
