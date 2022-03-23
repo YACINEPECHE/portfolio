@@ -1,0 +1,160 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="anim.css">
+</head>
+
+<body>
+    <div class="main_wrapper">
+        <div id="description">
+            <div class="navbar">
+                <nav>
+                    <a href="#about">
+                        <li>Moi</li>
+                    </a>
+                    <a href="#projects">
+                        <li>Mes projets</li>
+                    </a>
+                    <a href="#contacts">
+                        <li>Me contacter</li>
+                    </a>
+                </nav>
+            </div>
+            <div class="desc">
+                <div class="top_desc">
+                    <h1>Bienvenue !</h1>
+                    <p><span class="fade_in">Je suis étudiant en programmation,</span><br>
+                        <span class="fade_in">amateur de résolution de problèmes et à la recherche défis pour développer mes compétences.</span></p>
+                </div>
+                <div class="socials">
+                    <a class="linkedin" title="https://www.linkedin.com/in/yacinehil/" href="https://www.linkedin.com/in/yacinehil/" target="_blank">
+                        <div class="linkedin_logo">
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+            <div class="scroll">
+                <p class="scroll_down_anim">Scroll down ↓</p>
+            </div>
+        </div>
+        <div id="about">
+            <div class="me">
+                <h2 style="animation: 1.3s ease-in-out 0s 1 normal forwards running title_anim;">Bonjour, je suis Yacine HILAL.</h2>
+                <p class="fade_in" style="animation-delay: 0.3s;">Je suis un étudiant en école d'informatique à Paris, amateur de projets créatifs et de programmation, je porte un grand intérêt a la création de site et ce qui les entourent.<br>
+                    <br> Mes trois années d'études de chimie et ma passion pour la science m'ont dôté d'un esprit critique et d'une méthodologie scientifique que j'exploite dans la résolution de problèmes en tout genre.<br>
+                    <br> J'aime les languages de programmation orientés objet (JavaScript, Python, GDScript...).<br> Je suis ouvert à toute offre d'alternance au poste de développeur.
+                </p>
+                <div class="bottom_me fade_in" style="animation-delay: 0.5s;">
+                    <p><a href="#contacts">Me contacter</a></p>
+                    <p><a title="CV_Yacine_HILAL.pdf" href="resources/files/CV_Scotty_PONCIN.pdf" download="">Télécharger mon CV</a></p>
+                </div>
+            </div>
+            <div class="me_image"></div>
+        </div>
+        <div id="projects">
+            <div class="project fade_in">
+                <div class="visuals">
+                    <div class="visual">
+                        <div onclick="select_previous_image()" class="previous_image">
+                            <div class="arrow left"></div>
+                        </div>
+                        <div onclick="select_next_image()" class="next_image">
+                            <div class="arrow right"></div>
+                        </div>
+                        <div style="content: url(&quot;resources/images/clicker/photo_1.gif&quot;); width: 100%;"></div>
+                    </div>
+                    <div class="selector">
+                        <div onclick="select_previous_project()" class="previous_project">
+                            <p>Projet Précédent</p>
+                        </div>
+                        <div onclick="select_next_project()" class="next_project">
+                            <p>Projet Suivant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project_bottom">
+                    <div class="project_desc">
+
+                        <p>Clicker Game est un projet de développement d'un jeu vidéo style clicker.<br> Réalisé en équipe de deux, nous avons utilisé <strong>JavaScript</strong> et ses objets pour le développement des personnages et des différents éléments
+                            de gameplay ainsi que les <strong>keyframes</strong> de <strong>CSS</strong> pour les animations de nos personnages. Tous les dessins ont été réalisés par <a href="https://www.linkedin.com/in/bonhomme-julie/" target="_blank"
+                                title="https://www.linkedin.com/in/bonhomme-julie/">mon binôme</a> (@majolerigolo).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contacts">
+            <div class="contact_container">
+                <div class="left_contacts">
+                    <h1>Je suis disponible</h1>
+                    <div class="mail_phone">
+                        <div class="contact">
+                            <h2>Par mail :</h2>
+                            <div>
+                                <div class="mail">
+                                    <div class="mail_logo"></div>
+                                </div>
+                                <p class="mail_text">hilal_y@etna-alternance.net
+                                </p>
+                                <div>
+                                    <div class="copy_logo" onclick="copy_to_clipboard('mail')"></div><span class="mail_copy">Copié !</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact">
+                            <h2>Par téléphone :</h2>
+                            <div>
+                                <div class="phone">
+                                    <div class="phone_logo"></div>
+                                </div>
+                                <p class="phone_text">+33 7 51 56 99 18</p>
+                                <div>
+                                    <div class="copy_logo" onclick="copy_to_clipboard('phone')"></div><span class="phone_copy">Copié !</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact">
+                            <h2>Sur LinkedIn :</h2>
+                            <div>
+                                <a href="https://www.linkedin.com/in/yacinehil/
+                                " class="linkedin not_animated" target="_blank">
+                                    <div class="linkedin_logo"></div>
+                                </a>
+                                <p><a title="https://www.linkedin.com/in/yacinehil/
+                                    " href="https://www.linkedin.com/in/yacinehil/
+                                    " target="_blank">Yacine HILAL</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_contacts">
+                    <div>
+                        <h2>Me contacter</h2>
+                        <form action="mailto:scotty.poncin@gmail.com" method="post" enctype="text/plain">
+                            <div class="name_email">
+                                <input type="text" name="name" id="form_name" placeholder="Nom Prénom">
+                                <input type="email" name="email" id="form_email" placeholder="Email">
+                            </div>
+                            <div class="email_body">
+                                <input type="text" name="subject" id="form_subject" placeholder="Sujet">
+                                <textarea name="message" id="form_message" cols="30" rows="10" placeholder="Message"></textarea>
+                            </div>
+                            <div class="send">
+                                <input type="submit" name="submit" id="form_submit" value="Envoyer">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="go_up">
+                <p><a href="#description">Retourner en haut ↑</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
