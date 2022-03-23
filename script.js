@@ -6,32 +6,10 @@ var project_1 = {
     produits en vente sur notre site.\nMélangeant <strong>CSS</strong>, <strong>HTML</strong> et <strong>JavaScript</strong>, ce\
     projet m'a permis d'approfondir mes connaissances et développer mes compétences dans les technologies du web et la gestion\
     d'erreurs.",
-    photos: ["resources/images/liberty_commerce/photo_1.png", "resources/images/liberty_commerce/photo_2.png", "resources/images/liberty_commerce/photo_3.png"],
+    photos: ["resources/images/vectors/phdemo.png", "resources/images/vectors/phdemo1.png", "resources/images/vectors/phdemo2.png"],
 }
 
-var project_2 = {
-        name: "Clicker Game",
-        description: "Clicker Game est un projet de développement d'un jeu vidéo style clicker.<br> Réalisé en équipe de deux,\
-    nous avons utilisé <strong>JavaScript</strong> et ses objets pour le développement des personnages et des différents éléments de gameplay\
-    ainsi que les <strong>keyframes</strong> de <strong>CSS</strong> pour les animations de nos personnages. Tous les\
-    dessins ont été réalisés par <a href=\"https://www.linkedin.com/in/bonhomme-julie/\" target=\"_blank\" \
-    title=\"https://www.linkedin.com/in/bonhomme-julie/\">mon binôme</a> (@majolerigolo).",
-        photos: ["resources/images/clicker/photo_1.gif", "resources/images/clicker/photo_2.gif", "resources/images/clicker/photo_3.gif"],
-        link: ""
-    }
-    // : <a href=\"https://www.linkedin.com/in/bonhomme-julie/\" target=\"_blank\">Julie BONHOMME</a>
 
-var project_3 = {
-    name: "Mygaman",
-    description: "Mygaman est un projet personnel de développement d'un jeu vidéo style platformer avec des sprites de Megaman.<br>\
-    J'ai utilisé la librairie <strong>JavaScript</strong> <a target=\"_blank\" href=\"https://phaser.io/\"><strong>Phaser</strong></a> ainsi que le logiciel\
-    <a target=\"_blank\" href=\"https://www.mapeditor.org/\"><strong>Tiled</strong></a> (pour la génération de la tilemap).<br>J'ai pu expérimenter l'utilisation de spritesheets, la gestion de la physique,\
-    des points de vie et\
-    des interfaces utilisateur. J'ai aussi pu concevoir des éléments de gameplay comme des tirs, du recul, des collisions...<br>\
-    <a target=\"_blank\" href=\"https://xscotty.github.io/Mygaman/\"><strong style=\"font-size: 1.3em;\">Jouer &#127918</strong></a>",
-    photos: ["resources/images/megaman/photo_1.gif", "resources/images/megaman/photo_2.gif", "resources/images/megaman/photo_3.gif"],
-    link: "https://xscotty.github.io/Mygaman/"
-}
 
 var projects = [project_1, project_2, project_3]
 
